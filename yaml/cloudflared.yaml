@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflared
+  namespace: kube-system
+  labels:
+    app: cloudflared
+spec:
+  replicas: 2 # Alta disponibilidade
+  selector:
+    matchLabels:
+      app: cloudflared
+  template:
+    metadata:
+      labels:
+        app: cloudflared
+    spec:
+      containers:
+      - name: cloudflared
+        image: cloudflare/cloudflared:latest
+        args:
+        - tunnel
+        - --no-autoupdate
+        - run
+        - --token=eyJhIjoiZDVhZWU3YmZmMDcxNDc0NzI2NzY2ZjBlZTQxMWI5YjUiLCJ0IjoiYmY0ZDI2NjMtZmI1NS00YTEyLWI3NDQtZDE3YmYxOTdiNzExIiwicyI6Ik5UY3hPVEprT1RndFlqaGtNaTAwWlRBd0xXSmhObVl0WWpNMU9XTmtNakJsTkRKayJ9
