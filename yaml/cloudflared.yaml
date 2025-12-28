@@ -22,4 +22,4 @@ spec:
         - tunnel
         - --no-autoupdate
         - run
-        - --token=eyJhIjoiZDVhZWU3YmZmMDcxNDc0NzI2NzY2ZjBlZTQxMWI5YjUiLCJ0IjoiYmY0ZDI2NjMtZmI1NS00YTEyLWI3NDQtZDE3YmYxOTdiNzExIiwicyI6Ik5UY3hPVEprT1RndFlqaGtNaTAwWlRBd0xXSmhObVl0WWpNMU9XTmtNakJsTkRKayJ9
+        - --token=
